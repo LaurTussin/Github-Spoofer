@@ -1,23 +1,27 @@
 #include <iostream>
 #include <Windows.h>
 #include <string.h>
+#include <tchar.h>
+#include <urlmon.h>
+#pragma comment(lib, "urlmon.lib")
+#pragma comment(lib, "wininet.lib")
 
 
 int main()
 {
 	SetConsoleTitleA("Spoofer");
 	system("color 7");
-	std::cout << "Hello, Weolcome to github spoofer (Created by lau4), This is for all the people that have issues creating one or doesnt know how to create 1 \n";
+	std::cout << "Hello, Welcome to github spoofer (Created by lau4), This is for all the people that have issues creating one or doesnt know how to create 1 \n";
 	std::cout << "                                          \n";
-	system("pause");
+	Sleep(2500);
 	std::cout << "                                          \n";
 	std::cout << "Connecting to Spoofer\n";
 	std::cout << "                                        \n";
-	system("pause");
+	Sleep(2500);
 	std::cout << "                                       \n";
 	std::cout << "Connected!\n";
 	std::cout << "                                       \n";
-	system("pause");
+	Sleep(2500);
 	system("cls");
 Menu:
 	int option;
@@ -44,10 +48,18 @@ Menu:
 
 Clean:
 	{
-		//too lazy to add just add ur own its not hard, maybe on the future
-		std::cout << "Hello";
+		std::cout << "Cleaning\n";
+		std::cout << "                    \n";
+		HRESULT hr;
+		LPCTSTR Exe = _T("ur own cleaner"), FileP1 = _T("C:\Windows\urowncleaner.exe");
+		hr = URLDownloadToFile(0, Exe, FileP1, 0, 0);
+		Beep(500, 500);
 		Sleep(2000);
-		system("cls");
+		std::cout << "Succesfully cleaned\n";
+		std::cout << "                    \n";
+		std::cout <<  "Returning to menu\n";
+		Sleep(3000);
+     	system("cls");
 		goto Menu;
 
 
@@ -56,7 +68,17 @@ Clean:
 
 Spoof:
 	{
-		//too lazy to add again, maybe on the future
+		std::cout << "Spoofing\n";
+		Sleep(2500);
+		//get ur own spoofer skidder
+		HRESULT hr;
+		LPCTSTR Exe = _T("ur link to download mapper"), FileP1 = _T("C:\Windows\Urownmapper.exe");
+		LPCTSTR Sys = _T("ur link to download driver"), FileP2 = _T("C:\Windows\Urowndriver");
+		hr = URLDownloadToFile(0, Exe, FileP1, 0, 0);
+		hr = URLDownloadToFile(0, Sys, FileP2, 0, 0);
+		system("C:\Windows\HERE U PUT UR PATH OF MAPPER C:\Windows\PATH OF UR OWN DRIVER");
+		std::cout << "Succesfully Spoofed, Going back to the menu!\n";
+		Sleep(2500);
 		system("cls");
 		goto Menu;
 
@@ -77,6 +99,11 @@ Check:
 			std::cout << "Getting Disk Model\n";
 			system("wmic diskdrive get model");
 
+			std::cout << "Getting cpu's serialnumber\n";
+			system("wmic cpu get serialnumber");
+
+			std::cout << "Getting bios serialnumber\n";
+			system("wmic bios get serialnumber");
 
 			Sleep(10000);
 

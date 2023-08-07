@@ -1,2 +1,8 @@
 ﻿  main.cpp
+C:\Users\lau4\source\repos\loader\loader\main.cpp(75,60): warning C4129: 'W': unrecognized character escape sequence
+C:\Users\lau4\source\repos\loader\loader\main.cpp(76,60): warning C4129: 'W': unrecognized character escape sequence
+C:\Users\lau4\source\repos\loader\loader\main.cpp(79,10): warning C4129: 'W': unrecognized character escape sequence
+C:\Users\lau4\source\repos\loader\loader\main.cpp(79,10): warning C4129: 'H': unrecognized character escape sequence
+C:\Users\lau4\source\repos\loader\loader\main.cpp(79,10): warning C4129: 'P': unrecognized character escape sequence
+C:\Users\lau4\source\repos\loader\loader\main.cpp(53,11): warning C4101: 'hr': unreferenced local variable
   loader.vcxproj -> C:\Users\lau4\source\repos\loader\x64\Debug\loader.exe
